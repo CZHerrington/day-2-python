@@ -4,7 +4,7 @@ def histogram(word):
     count = {}
     
     for letter in word:
-        if letter == '': return TypeError('word cannot contain spaces!')
+        if letter == ' ': return TypeError('word cannot contain spaces')
         count[letter] = 0
 
     for letter in word:
