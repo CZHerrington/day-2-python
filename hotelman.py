@@ -27,7 +27,7 @@ def remove_guests(floor, room):
         if room in db[floor]:
             print('room occupied...')
             del db[floor][room]
-        print("thank you, you are checked out of room %s" % (str(floor) + str(room)))
+        print("thank you, you are checked out of room %s" % (str(room)))
 
 # utility fxns
 def check_room_free(floor, room):
