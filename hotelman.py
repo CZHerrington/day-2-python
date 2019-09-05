@@ -9,7 +9,6 @@ db = {
     '333': ['Neo', 'Trinity', 'Morpheus']
   }
 }
-run = True
 # db operations
 def add_guests(floor, room, occupants):
     if floor not in db:
@@ -70,22 +69,23 @@ def prompt_checkout():
 
 # main prompt
 def menu():
-    option = int(input('1. Check in\n2. Check out\n3. Dump database\n4. Exit program\n> '))
-    if option == 1:
-        prompt_checkin()
+    run = True
+    while run:
+        option = int(input('1. Check in\n2. Check out\n3. Dump database\n4. Exit program\n> '))
+        if option == 1:
+            prompt_checkin()
 
-    if option == 2:
-        prompt_checkout()
+        if option == 2:
+            prompt_checkout()
 
-    if option == 3:
-        print(db)
+        if option == 3:
+            print(db)
 
-    if option == 4:
-        run = False
+        if option == 4:
+            run = False
 
-    if option > 4:
-        print('selection must be one of the available options')
+        if option > 4:
+            print('selection must be one of the available options')
 
-
+menu()
 # make main loop that calls menu fxn, script style
-while run: menu()
